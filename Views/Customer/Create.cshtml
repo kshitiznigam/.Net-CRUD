@@ -1,0 +1,31 @@
+@model CRUD.Models.Customer
+
+<h2>Create Customer</h2>
+
+<form asp-controller="Customer" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="CustomerName">Customer Name</label>
+        <input asp-for="CustomerName" name="CustomerName" class="form-control" />
+        <span asp-validation-for="CustomerName" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" name="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="ContactNo">Contact Number</label>
+        <input asp-for="ContactNo" name="ContactNo" class="form-control" />
+        <span asp-validation-for="ContactNo" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="LastOrderDate">Last Order Date</label>
+        <input asp-for="LastOrderDate" type="date" name="LastOrderDate" class="form-control" />
+        <span asp-validation-for="LastOrderDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
